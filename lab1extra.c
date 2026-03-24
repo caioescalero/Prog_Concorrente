@@ -1,3 +1,36 @@
+/*
+ * ------------------------------------------------------------
+ * Autor: Caio Escalero
+ * Disciplina: Programação Concorrente
+ *
+ * Descrição:
+ * Programa em C que utiliza múltiplas threads (pthread)
+ * para calcular a soma de um vetor de inteiros.
+ *
+ * O vetor é dividido em partes iguais entre as threads.
+ * Cada thread calcula a soma parcial do seu segmento e
+ * retorna o resultado para a thread principal.
+ *
+ * A thread principal coleta os resultados parciais e
+ * calcula a soma total do vetor.
+ *
+ * Parâmetros de entrada:
+ *   argv[1] -> número de threads
+ *   argv[2] -> tamanho do vetor
+ *
+ * Exemplo de execução:
+ *   ./programa 4 1000
+ *
+ * Saída:
+ *   Soma parcial de cada thread
+ *   Soma total do vetor
+ *
+ * Observações:
+ * - Não utiliza mutex (cada thread opera em uma região distinta)
+ * - Uso de alocação dinâmica para retorno das threads
+ * ------------------------------------------------------------
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
