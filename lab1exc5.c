@@ -1,7 +1,21 @@
 /* Disciplina: Programacao Concorrente */
-/* Profa.: Silvana Rossetto */
+/* Prof.: Gabriel Pereira */
 /* Laboratório: 1 */
-/* Codigo: "Hello World" usando threads em C e a funcao que espera as threads terminarem */
+/* Codigo: Soma +1 em vetor usando M threads */
+
+/*
+ * Descricao:
+ * Este programa cria M threads para somar 1 a cada elemento de um vetor de N posições.
+ * O vetor é dividido em partes, e cada thread fica responsável por uma fatia.
+ *
+ * Entrada:
+ * ./exercicio5 <num_threads> <tam_vetor>
+ * num_threads = número de threads
+ * tam_vetor = tamanho do vetor
+ *
+ * Saida:
+ * Vetor com todos os elementos incrementados em 1
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
